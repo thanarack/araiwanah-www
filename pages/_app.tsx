@@ -8,24 +8,31 @@ import relativeTime from 'dayjs/plugin/relativeTime';
 import { PersistGate } from 'redux-persist/integration/react';
 import { persistor, store } from '../store';
 import 'dayjs/locale/th';
+import '../styles/globals.css';
 
 dayjs.extend(relativeTime);
 dayjs.locale('th');
 
-const colors = {
-  brand: {
-    900: '#1a365d',
-    800: '#153e75',
-    700: '#2a69ac',
+const theme = extendTheme({
+  styles: {
+    global: {
+      body: {
+        bg: 'whitesmoke',
+      },
+    },
   },
-};
-
-const fonts = {
-  heading: `'Noto Sans Thai', sans-serif`,
-  body: `'Noto Sans Thai', sans-serif`,
-};
-
-const theme = extendTheme({ colors, fonts });
+  colors: {
+    brand: {
+      900: '#1a365d',
+      800: '#153e75',
+      700: '#2a69ac',
+    },
+  },
+  fonts: {
+    heading: `'Noto Sans Thai', sans-serif`,
+    body: `'Noto Sans Thai', sans-serif`,
+  },
+});
 
 function ThemeComponent({ Component, pageProps, router }: AppProps) {
   const props: any = { pageProps, router };
