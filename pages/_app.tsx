@@ -29,8 +29,8 @@ const theme = extendTheme({
     },
   },
   fonts: {
-    heading: `'Noto Sans Thai', sans-serif`,
-    body: `'Noto Sans Thai', sans-serif`,
+    heading: `Segoe UI Historic, Segoe UI, Helvetica, Arial, sans-serif`,
+    body: `Segoe UI Historic, Segoe UI, Helvetica, Arial, sans-serif`,
   },
 });
 
