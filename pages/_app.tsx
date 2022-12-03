@@ -35,6 +35,10 @@ const theme = extendTheme({
     heading: `Segoe UI Historic, Segoe UI, Helvetica, Arial, sans-serif`,
     body: `Segoe UI Historic, Segoe UI, Helvetica, Arial, sans-serif`,
   },
+  shadows: {
+    navbarHeader: '0 1px 1px rgba(0,0,0, 0.1)',
+    navbarCard: '0 0 0 1px rgba(23, 23, 23, 0.1)',
+  },
 });
 
 function ThemeComponent({ Component, pageProps, router }: AppProps) {

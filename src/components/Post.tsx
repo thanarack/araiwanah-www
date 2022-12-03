@@ -24,9 +24,8 @@ export default function Post(props: any) {
 
   return (
     <Box
-      borderWidth={1}
+      // boxShadow="var(--chakra-shadows-navbarCard)"
       boxShadow="xs"
-      // borderColor="whiteAlpha.300"
       borderRadius="md"
       background="white"
       p={5}

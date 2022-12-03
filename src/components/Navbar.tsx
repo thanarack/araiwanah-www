@@ -20,10 +20,11 @@ export default function Navbar() {
       position="fixed"
       width="100%"
       top="0"
-      borderBottom="1px"
-      borderColor="blackAlpha.200"
-      boxShadow="sm"
       zIndex={99}
+      boxShadow="xs"
+      // css={{
+      //   boxShadow: 'var(--chakra-shadows-navbarHeader)',
+      // }}
     >
       <Container maxWidth="1280" py={2}>
         <Flex direction="row" gap={4}>
@@ -77,7 +78,8 @@ export default function Navbar() {
               <Link href="/enter/?state=new-user">
                 <Button
                   type="button"
-                  colorScheme="twitter" variant="outline"
+                  colorScheme="twitter"
+                  variant="outline"
                   _hover={{
                     background: 'twitter.500',
                     color: 'white',
