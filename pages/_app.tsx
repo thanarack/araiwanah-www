@@ -3,7 +3,7 @@ import { ChakraProvider } from '@chakra-ui/react';
 import { extendTheme } from '@chakra-ui/react';
 import type { AppProps } from 'next/app';
 import { Provider } from 'react-redux';
-import * as dayjs from 'dayjs';
+import dayjs from 'dayjs';
 import relativeTime from 'dayjs/plugin/relativeTime';
 import { PersistGate } from 'redux-persist/integration/react';
 import { persistor, store } from '../store';
@@ -17,7 +17,7 @@ const theme = extendTheme({
   styles: {
     global: {
       body: {
-        bg: 'whitesmoke',
+        bg: 'blackAlpha.50',
       },
     },
   },
@@ -26,6 +26,9 @@ const theme = extendTheme({
       900: '#1a365d',
       800: '#153e75',
       700: '#2a69ac',
+    },
+    link: {
+      900: 'rgba(59, 73, 223)',
     },
   },
   fonts: {

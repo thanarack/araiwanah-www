@@ -20,7 +20,9 @@ export default function Navbar() {
       position="fixed"
       width="100%"
       top="0"
-      boxShadow="sm"
+      borderBottom="1px"
+      borderColor="blackAlpha.300"
+      zIndex={99}
     >
       <Container maxWidth="1280" py={2}>
         <Flex direction="row" gap={4}>
@@ -39,9 +41,10 @@ export default function Navbar() {
               placeholder="ค้นหา..."
               px={2}
               w="420px"
-              focusBorderColor="cyan.600"
+              focusBorderColor="twitter.600"
               maxLength={200}
-              borderColor="blackAlpha.500"
+              borderColor="blackAlpha.400"
+              borderWidth={1.5}
             />
             <Button
               p={0}
@@ -63,28 +66,27 @@ export default function Navbar() {
                   _hover={{
                     borderRadius: 'md',
                     background: 'gray.100',
-                    color: 'cyan.600',
+                    color: 'twitter.600',
                     textDecoration: 'underline',
                   }}
                 >
                   <Text>เข้าสู่ระบบ</Text>
                 </Box>
               </Link>
-              <Button
-                type="button"
-                background="transparent"
-                borderColor="cyan.400"
-                borderWidth="1px"
-                color="cyan.700"
-                _hover={{
-                  background: 'cyan.600',
-                  color: 'white',
-                  textDecoration: 'underline',
-                  borderColor: 'cyan.600',
-                }}
-              >
-                สร้างบัญชี
-              </Button>
+              <Link href="/enter/?state=new-user">
+                <Button
+                  type="button"
+                  colorScheme="twitter" variant="outline"
+                  _hover={{
+                    background: 'twitter.500',
+                    color: 'white',
+                    textDecoration: 'underline',
+                    borderColor: 'twitter.500',
+                  }}
+                >
+                  สร้างบัญชี
+                </Button>
+              </Link>
             </Flex>
           </Flex>
         </Flex>

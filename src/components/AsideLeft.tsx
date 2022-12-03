@@ -1,6 +1,16 @@
-import { List, ListIcon, ListItem, Icon, Box, Text } from '@chakra-ui/react';
+import {
+  List,
+  ListIcon,
+  ListItem,
+  Icon,
+  Box,
+  Text,
+  Heading,
+  Flex,
+} from '@chakra-ui/react';
 import Link from 'next/link';
-import { AsideListItems } from '../../configs/constant';
+import { AsideListItems, TagsPopular } from '../../configs/constant';
+import { BiHash } from 'react-icons/bi';
 
 export default function AsideLeft() {
   return (
@@ -17,8 +27,8 @@ export default function AsideLeft() {
                 pl={2}
                 _hover={{
                   borderRadius: 'md',
-                  background: 'gray.200',
-                  color: 'cyan.600',
+                  background: 'whiteAlpha.900',
+                  color: 'twitter.600',
                 }}
               >
                 <ListIcon color="gray.500" as={val.icon} w="5" h="5" />
@@ -30,6 +40,52 @@ export default function AsideLeft() {
           </ListItem>
         ))}
       </List>
+      <Box mt={6}>
+        <Heading as="h5" size="sm">
+          แท็คยอดนิยม
+        </Heading>
+        <Box
+          h="270px"
+          overflow="hidden"
+          overflowY="scroll"
+          mt={1.5}
+          css={{
+            '&::-webkit-scrollbar': {
+              width: '8px',
+            },
+            '&::-webkit-scrollbar-track': {
+              background: 'RGBA(0, 0, 0, 0.08)',
+              borderRadius: '10px',
+            },
+            '&::-webkit-scrollbar-thumb': {
+              backgroundColor: 'RGBA(0, 0, 0, 0.24)',
+              borderRadius: '10px',
+            },
+          }}
+        >
+          <List>
+            {TagsPopular.map((val, index) => (
+              <ListItem key={index}>
+                <Link href={'/t/' + val.tag}>
+                  <Flex
+                    pl={2}
+                    py={2}
+                    alignItems="center"
+                    _hover={{
+                      borderRadius: 'md',
+                      background: 'whiteAlpha.900',
+                      color: 'twitter.600',
+                    }}
+                  >
+                    <Icon as={BiHash} pos="relative" top={0.5} />
+                    {val.tag}
+                  </Flex>
+                </Link>
+              </ListItem>
+            ))}
+          </List>
+        </Box>
+      </Box>
     </>
   );
 }
