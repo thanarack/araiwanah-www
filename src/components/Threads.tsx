@@ -39,7 +39,7 @@ export default function Threads(props: any) {
       <Box>
         {data.length === 0 && (
           <Flex px={4} mb={6} alignItems="center" direction="column">
-            <Text textAlign="center" py={4}>
+            <Text textAlign="center" py={4} color="blackAlpha.600">
               อุ๊ยย.. 🤭 ดูเหมือนว่ายังไม่มีโพสต์
               <br /> มาสร้างโพสต์แรกของคุณกันเถอะ 📝
             </Text>
