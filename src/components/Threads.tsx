@@ -22,8 +22,7 @@ export default function Threads(props: any) {
     <Box
       background="whiteAlpha.600"
       borderRadius="md"
-      borderWidth={1}
-      borderColor="blackAlpha.200"
+      boxShadow="xs"
       overflow="hidden"
       mt={mt}
     >

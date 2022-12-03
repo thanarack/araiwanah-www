@@ -25,7 +25,8 @@ export default function Post(props: any) {
   return (
     <Box
       borderWidth={1}
-      borderColor="blackAlpha.400"
+      boxShadow="xs"
+      // borderColor="whiteAlpha.300"
       borderRadius="md"
       background="white"
       p={5}

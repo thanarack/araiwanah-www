@@ -21,7 +21,8 @@ export default function Navbar() {
       width="100%"
       top="0"
       borderBottom="1px"
-      borderColor="blackAlpha.300"
+      borderColor="blackAlpha.200"
+      boxShadow="sm"
       zIndex={99}
     >
       <Container maxWidth="1280" py={2}>
