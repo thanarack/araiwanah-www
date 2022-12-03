@@ -77,7 +77,7 @@ export default function AsideLeft() {
                       color: 'twitter.600',
                     }}
                   >
-                    <Icon as={BiHash} pos="relative" top={0.5} />
+                    <Icon as={BiHash} pos="relative" top={0} />
                     {val.tag}
                   </Flex>
                 </Link>

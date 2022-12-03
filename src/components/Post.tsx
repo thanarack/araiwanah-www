@@ -24,7 +24,6 @@ export default function Post(props: any) {
 
   return (
     <Box
-      // boxShadow="var(--chakra-shadows-navbarCard)"
       boxShadow="xs"
       borderRadius="md"
       background="white"
@@ -40,7 +39,7 @@ export default function Post(props: any) {
         <Flex direction="column" alignContent="space-around" mt={-1.5}>
           <Link href={userUrl} />
           <Button background="transparent" px={1} py={1} h="auto" type="button">
-            <Text color="blackAlpha.700" noOfLines={1} fontSize="sm">
+            <Text as="span" color="blackAlpha.700" fontSize="sm">
               {data.user.name}
             </Text>
           </Button>
@@ -99,7 +98,7 @@ export default function Post(props: any) {
                   <Icon
                     as={BiHash}
                     pos="relative"
-                    top={0.5}
+                    top={0}
                     color="blackAlpha.500"
                     fontWeight="normal"
                   />

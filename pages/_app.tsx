@@ -32,8 +32,8 @@ const theme = extendTheme({
     },
   },
   fonts: {
-    heading: `Segoe UI Historic, Segoe UI, Helvetica, Arial, sans-serif`,
-    body: `Segoe UI Historic, Segoe UI, Helvetica, Arial, sans-serif`,
+    heading: `'Noto Sans Thai', sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial`,
+    body: `'Noto Sans Thai', sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial`,
   },
   shadows: {
     navbarHeader: '0 1px 1px rgba(0,0,0, 0.1)',
