@@ -11,10 +11,12 @@ import {
 import Link from 'next/link';
 import { AsideListItems, TagsPopular } from '../../configs/constant';
 import { BiHash } from 'react-icons/bi';
+import RegisterPop from './RegisterPop';
 
 export default function AsideLeft() {
   return (
     <>
+      <RegisterPop mb={6}/>
       <List>
         {AsideListItems.map((val, index) => (
           <ListItem key={index} role="group">
