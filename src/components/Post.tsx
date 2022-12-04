@@ -15,8 +15,7 @@ import dayjs from 'dayjs';
 import Link from 'next/link';
 import { BiBookmark } from 'react-icons/bi';
 import { AiOutlineHeart } from 'react-icons/ai';
-import { GoCommentDiscussion } from 'react-icons/go';
-import { BiHash } from 'react-icons/bi';
+import { BiHash,BiCommentDetail } from 'react-icons/bi';
 
 export default function Post(props: any) {
   const { data } = props;
@@ -155,7 +154,7 @@ export default function Post(props: any) {
                 alignItems="center"
                 gap={2}
               >
-                <Icon as={GoCommentDiscussion} w={5} h={5} />
+                <Icon as={BiCommentDetail} w={5} h={5} />
                 {data.post.countComment === 0 && <Text>แสดงความคิดเห็น</Text>}
                 {data.post.countComment > 0 && (
                   <Text>{data.post.countLike} ความคิดเห็น</Text>

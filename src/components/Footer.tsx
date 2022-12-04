@@ -5,7 +5,7 @@ import Link from 'next/link';
 
 export default function Footer() {
   return (
-    <Box as="footer" mt={20} background="blackAlpha.50" py={16}>
+    <Box mb="auto" as="footer" mt={20} background="blackAlpha.50" py={16}>
       <Container maxWidth="1280">
         <Flex gap={2} direction="column" alignItems="center">
           <Text>
