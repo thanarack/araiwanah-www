@@ -1,5 +1,6 @@
-import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+'use client';
 
+import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 export interface IAuth {
   isAuth: boolean;
   username: string;
