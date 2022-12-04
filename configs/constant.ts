@@ -41,7 +41,7 @@ export const AsideListItems = [
 
 export const RelevantLinks = [
   {
-    title: 'ที่เกี่ยวข้อง',
+    title: 'เกี่ยวข้อง',
     link: '/',
   },
   {

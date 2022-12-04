@@ -1,5 +1,10 @@
-import LayoutDefault from '../../src/components/LayoutDefault';
+import LayoutHome from '../../src/components/LayoutHome';
+import MiddleContent from '../../src/components/MiddleContent';
 
 export default function Page() {
-  return <LayoutDefault>Latest</LayoutDefault>;
+  return (
+    <LayoutHome>
+      <MiddleContent />
+    </LayoutHome>
+  );
 }
