@@ -18,7 +18,7 @@ import RegisterPop from './RegisterPop';
 export default function AsideLeft() {
   return (
     <>
-      <RegisterPop mb={6}/>
+      <RegisterPop mb={4}/>
       <List>
         {AsideListItems.map((val, index) => (
           <ListItem key={index} role="group">
@@ -44,7 +44,7 @@ export default function AsideLeft() {
           </ListItem>
         ))}
       </List>
-      <Box mt={6}>
+      <Box mt={4}>
         <Heading as="h5" size="sm">
           แท็คยอดนิยม
         </Heading>
