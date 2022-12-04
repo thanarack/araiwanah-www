@@ -1,4 +1,6 @@
-import { Box, Container, Grid, GridItem } from '@chakra-ui/react';
+'use client';
+
+import { Container, Grid, GridItem } from '@chakra-ui/react';
 import AsideLeft from '../src/components/AsideLeft';
 import Footer from '../src/components/Footer';
 import MiddleContent from '../src/components/MiddleContent';
@@ -7,9 +9,9 @@ import Threads from '../src/components/Threads';
 
 export default function Home() {
   return (
-    <Box>
+    <>
       <Navbar />
-      <Container as="main" maxWidth="1280" mt="20">
+      <Container as="main" maxWidth="1280" mt={20}>
         <Grid templateColumns="repeat(11, 1fr)" gap={4}>
           <GridItem colSpan={2}>
             <AsideLeft />
@@ -33,6 +35,6 @@ export default function Home() {
         </Grid>
       </Container>
       <Footer />
-    </Box>
+    </>
   );
 }

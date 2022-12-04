@@ -1,3 +1,5 @@
+'use client';
+
 import {
   Box,
   Button,
@@ -7,7 +9,6 @@ import {
   Image,
   Input,
   Text,
-  textDecoration,
 } from '@chakra-ui/react';
 import Link from 'next/link';
 import { MdSearch } from 'react-icons/md';
@@ -28,7 +29,7 @@ export default function Navbar() {
           <Box id="brand">
             <Link href="/">
               <Image
-                src="image/Araiwanah-logo.png"
+                src="/image/Araiwanah-logo.png"
                 alt="อะไรวะน่ะ"
                 height="40px"
               />

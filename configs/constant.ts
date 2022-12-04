@@ -1,3 +1,4 @@
+'use client';
 import { FcHome, FcFaq, FcAbout, FcAddressBook } from 'react-icons/fc';
 import { FaSlackHash } from 'react-icons/fa';
 

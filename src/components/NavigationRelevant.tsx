@@ -1,11 +1,12 @@
+'use client';
+
 import { Box, Flex, Text } from '@chakra-ui/react';
 import Link from 'next/link';
-import { useRouter } from 'next/router';
+import { usePathname } from 'next/navigation';
 import { RelevantLinks } from '../../configs/constant';
 
 export default function NavigationRelevant() {
-  const router = useRouter();
-  const path = router.pathname;
+  const path = usePathname();
 
   return (
     <Flex>

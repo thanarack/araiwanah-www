@@ -1,3 +1,5 @@
+'use client';
+
 import { useState } from 'react';
 import { List, ListItem } from '@chakra-ui/react';
 import Post from './Post';

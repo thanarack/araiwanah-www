@@ -1,14 +1,15 @@
+'use client';
+
 import React from 'react';
-import { ChakraProvider } from '@chakra-ui/react';
+import { ChakraBaseProvider } from '@chakra-ui/react';
 import { extendTheme } from '@chakra-ui/react';
-import type { AppProps } from 'next/app';
 import { Provider } from 'react-redux';
 import dayjs from 'dayjs';
 import relativeTime from 'dayjs/plugin/relativeTime';
 import { PersistGate } from 'redux-persist/integration/react';
-import { persistor, store } from '../store';
+import { persistor, store } from '../../store';
 import 'dayjs/locale/th';
-import '../styles/globals.css';
+import '../../styles/globals.css';
 
 dayjs.extend(relativeTime);
 dayjs.locale('th');
@@ -41,26 +42,14 @@ const theme = extendTheme({
   },
 });
 
-function ThemeComponent({ Component, pageProps, router }: AppProps) {
-  const props: any = { pageProps, router };
-
+const AppProvider = ({ children }: { children: React.ReactNode }) => {
   return (
-    <ChakraProvider theme={theme}>
-      <Component {...props} />
-    </ChakraProvider>
-  );
-}
-
-const MyApp = (props: AppProps) => {
-  return (
-    <React.StrictMode>
-      <Provider store={store}>
-        <PersistGate loading={null} persistor={persistor}>
-          <ThemeComponent {...props} />
-        </PersistGate>
-      </Provider>
-    </React.StrictMode>
+    <Provider store={store}>
+      <PersistGate loading={null} persistor={persistor}>
+        <ChakraBaseProvider theme={theme}>{children}</ChakraBaseProvider>
+      </PersistGate>
+    </Provider>
   );
 };
 
-export default MyApp;
+export default AppProvider;
