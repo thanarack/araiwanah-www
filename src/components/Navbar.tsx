@@ -12,8 +12,12 @@ import {
 } from '@chakra-ui/react';
 import Link from 'next/link';
 import { MdSearch } from 'react-icons/md';
+import { useSelector } from 'react-redux';
+import { RootState } from '../../store';
 
 export default function Navbar() {
+  // const authState = useSelector((state: RootState) => state.authReducer);
+
   return (
     <Box
       as="nav"

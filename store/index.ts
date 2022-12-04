@@ -1,7 +1,7 @@
 'use client';
 
 import { combineReducers, configureStore } from '@reduxjs/toolkit';
-import storageSession from 'redux-persist/lib/storage/session';
+import storage from 'redux-persist/lib/storage'; // defaults to localStorage for web
 import { persistReducer, persistStore } from 'redux-persist';
 import authReducer from './reducers/authReducer';
 import themeReducer from './reducers/themeReducer';
@@ -9,7 +9,7 @@ import { useDispatch } from 'react-redux';
 
 const persistConfig = {
   key: 'root',
-  storage: storageSession,
+  storage,
 };
 
 const rootReducer = combineReducers({
