@@ -33,7 +33,7 @@ export default function Navbar() {
           <Box id="brand">
             <Link href="/">
               <Image
-                src="/image/Araiwanah-logo.png"
+                src="/image/exolog-logo.png"
                 alt="อะไรวะน่ะ"
                 height="40px"
               />

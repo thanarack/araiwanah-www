@@ -15,21 +15,16 @@ import dayjs from 'dayjs';
 import Link from 'next/link';
 import { BiBookmark } from 'react-icons/bi';
 import { AiOutlineHeart } from 'react-icons/ai';
-import { BiHash,BiCommentDetail } from 'react-icons/bi';
+import { BiHash, BiCommentDetail } from 'react-icons/bi';
 
 export default function Post(props: any) {
   const { data } = props;
 
-  const userUrl = '/' + data.user.slug;
-  const postLink = '/' + data.user.slug + '/' + data.post.slug;
+  const userUrl = '/u/' + data.user.slug;
+  const postLink = '/p/' + data.post.postId;
 
   return (
-    <Box
-      boxShadow="xs"
-      borderRadius="md"
-      background="white"
-      p={5}
-    >
+    <Box boxShadow="xs" borderRadius="md" background="white" p={5}>
       <Flex gap={2}>
         <Image
           src={data.user.picture}
@@ -38,12 +33,19 @@ export default function Post(props: any) {
           boxSize="32px"
         />
         <Flex direction="column" alignContent="space-around" mt={-1.5}>
-          <Link href={userUrl} />
-          <Button background="transparent" px={1} py={1} h="auto" type="button">
-            <Text as="span" color="blackAlpha.700" fontSize="sm">
-              {data.user.name}
-            </Text>
-          </Button>
+          <Link href={userUrl}>
+            <Button
+              background="transparent"
+              px={1}
+              py={1}
+              h="auto"
+              type="button"
+            >
+              <Text as="span" color="blackAlpha.700" fontSize="sm">
+                {data.user.name}
+              </Text>
+            </Button>
+          </Link>
           <Text
             as="time"
             lineHeight={1.5}

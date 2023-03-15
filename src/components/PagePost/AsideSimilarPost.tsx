@@ -12,32 +12,32 @@ import {
   Text,
 } from '@chakra-ui/react';
 import { BiHash } from 'react-icons/bi';
-import { MockPots } from '../../configs/constant';
 import Link from 'next/link';
+import { MockPots } from '../../../configs/constant';
 
-export default function Threads(props: any) {
-  const { title, mt } = props;
-
-  const [data, setData] = useState([]);
+export default function AsideSimilarPost() {
+  const [data, setData] = useState(MockPots);
 
   return (
     <Box
+      as="aside"
       background="whiteAlpha.600"
       borderRadius="md"
       boxShadow="xs"
       overflow="hidden"
-      mt={mt}
     >
-      <Heading as="h5" size="md" p={4}>
-        <Icon
-          as={BiHash}
-          pos="relative"
-          top={1}
-          color="blackAlpha.900"
-          fontWeight="normal"
-        />
-        {title}
-      </Heading>
+      <Box>
+        <Heading as="h5" size="md" p={4}>
+          <Icon
+            as={BiHash}
+            pos="relative"
+            top={1}
+            color="blackAlpha.900"
+            fontWeight="normal"
+          />
+          โพสต์ที่คล้ายกัน
+        </Heading>
+      </Box>
       <Box>
         {data.length === 0 && (
           <Flex px={4} mb={6} alignItems="center" direction="column">
@@ -62,6 +62,8 @@ export default function Threads(props: any) {
                     py={4}
                     px={4}
                     _hover={{ background: 'whiteAlpha.900' }}
+                    borderBottom="1px"
+                    borderColor="gray.200"
                   >
                     <Text>{val.post.title}</Text>
                     <Box mt={1}>

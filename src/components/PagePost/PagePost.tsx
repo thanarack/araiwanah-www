@@ -4,6 +4,7 @@ import { Box, Container, Grid, GridItem, Heading } from '@chakra-ui/react';
 import ContentBody from './ContentBody';
 import AsideProfile from './AsideProfile';
 import Reaction from './Reaction';
+import AsideSimilarPost from './AsideSimilarPost';
 
 export default function PagePost() {
   return (
@@ -17,7 +18,8 @@ export default function PagePost() {
             <ContentBody />
           </GridItem>
           <GridItem colSpan={5}>
-            <AsideProfile />
+            {/* <AsideProfile /> */}
+            <AsideSimilarPost />
           </GridItem>
         </Grid>
       </Container>

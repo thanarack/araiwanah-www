@@ -11,7 +11,7 @@ export default function Footer() {
           <Text>
             <Link href="/">
               <Text color="twitter.600" fontWeight="semibold" as="span" mr={1}>
-                @Araiwanah | อะไรวะน๊ะ
+                @Exolog
               </Text>
             </Link>
             🤔😮 &#8213; แอปพลิเคชันชุมชนสำหรับแบ่งปันเรื่องราว
