@@ -6,6 +6,7 @@ import authReducer from './reducers/authReducer';
 import themeReducer from './reducers/themeReducer';
 import { useDispatch } from 'react-redux';
 import createWebStorage from 'redux-persist/lib/storage/createWebStorage';
+import postPageReducer from './reducers/postPageReducer';
 
 const createNoopStorage = () => {
   return {
@@ -32,6 +33,7 @@ const persistConfig = {
 
 const rootReducer = combineReducers({
   theme: themeReducer,
+  postPage: postPageReducer,
   authReducer,
 });
 

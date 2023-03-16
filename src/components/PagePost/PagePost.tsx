@@ -1,12 +1,28 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 'use client';
 
+import React, { useEffect } from 'react';
 import { Box, Container, Grid, GridItem, Heading } from '@chakra-ui/react';
 import ContentBody from './ContentBody';
 import AsideProfile from './AsideProfile';
 import Reaction from './Reaction';
 import AsideSimilarPost from './AsideSimilarPost';
+import { useDispatch } from 'react-redux';
+import { fetchNewPost } from '../../../store/reducers/postPageReducer';
 
-export default function PagePost() {
+const PagePost = (props: any) => {
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(
+      fetchNewPost({
+        id: 'test',
+        content: props.data.contentHtml,
+        isForceUpdate: true,
+      })
+    );
+  }, [props.data.contentHtml]);
+
   return (
     <Box>
       <Container as="main" maxWidth="1280" mt={20}>
@@ -25,4 +41,6 @@ export default function PagePost() {
       </Container>
     </Box>
   );
-}
+};
+
+export default React.memo(PagePost);
