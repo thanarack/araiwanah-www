@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { List, ListItem } from '@chakra-ui/react';
+import { Box, List, ListItem, Text } from '@chakra-ui/react';
 import Post from './Post';
 import { MockPots } from '../../configs/constant';
 
@@ -17,6 +17,17 @@ export default function PostLists(props: any) {
           <Post data={val} />
         </ListItem>
       ))}
+      {!data.length && (
+        <Box
+          boxShadow="xs"
+          textAlign="center"
+          borderRadius="md"
+          background="white"
+          p={5}
+        >
+          <Text>ไม่มีโพสต์ในตอนนี้</Text>
+        </Box>
+      )}
     </List>
   );
 }

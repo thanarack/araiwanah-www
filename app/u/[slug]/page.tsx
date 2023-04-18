@@ -1,5 +1,10 @@
-import LayoutDefault from '../../../src/components/LayoutDefault';
+import PostLists from '../../../src/components/PotsLists';
+import LayoutProfile from '../../../src/components/Profile/LayoutProfile';
 
 export default function Page() {
-  return <LayoutDefault>U</LayoutDefault>;
+  return (
+    <LayoutProfile>
+      <PostLists />
+    </LayoutProfile>
+  );
 }

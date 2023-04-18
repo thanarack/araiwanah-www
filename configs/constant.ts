@@ -261,3 +261,26 @@ export const MockPots = [
     },
   },
 ];
+
+export const ProfileListItems = [
+  {
+    title: 'จัดการโพสต์',
+    link: '/dashboard',
+    icon: FaSlackHash,
+  },
+  {
+    title: 'สร้างโพสต์ใหม่',
+    link: '/new',
+    icon: FcFaq,
+  },
+  {
+    title: 'รายการที่ชื่นชอบ',
+    link: '/favorites',
+    icon: FcAbout,
+  },
+  {
+    title: 'ตั้งค่า',
+    link: '/settings',
+    icon: FcAddressBook,
+  },
+];
