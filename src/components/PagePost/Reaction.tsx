@@ -33,11 +33,11 @@ export default function Reaction() {
             <Text fontSize="sm" fontWeight="normal">0</Text>
           </Flex>
         </Button>
-        <Button variant="ghost" _hover={{ background: 'transparent' }}>
+        {/* <Button variant="ghost" _hover={{ background: 'transparent' }}>
           <Flex direction="column" alignItems="center" gap={2}>
             <Icon as={BsThreeDots} w={6} h={6} />
           </Flex>
-        </Button>
+        </Button> */}
       </Flex>
     </Box>
   );

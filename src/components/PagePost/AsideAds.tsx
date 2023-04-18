@@ -1,18 +1,21 @@
 'use client';
 
-import { Box, Heading, Icon } from '@chakra-ui/react';
+import { Box, Flex, Heading, Icon } from '@chakra-ui/react';
 import { BiHash } from 'react-icons/bi';
 
-export default function AsideAds() {
+export default function AsideAds(props: any) {
+  const { mt } = props;
+
   return (
     <Box
       as="aside"
-      background="whiteAlpha.600"
+      background="white"
       borderRadius="md"
       boxShadow="xs"
       overflow="hidden"
+      mt={mt}
     >
-      <Box>
+      {/* <Box>
         <Heading as="h5" size="md" p={4}>
           <Icon
             as={BiHash}
@@ -23,8 +26,10 @@ export default function AsideAds() {
           />
           Advertisement
         </Heading>
-      </Box>
-      {/* <Box>asdasd</Box> */}
+      </Box> */}
+      <Flex p={4} justify="center" align="center">
+        Ads show here
+      </Flex>
     </Box>
   );
 }

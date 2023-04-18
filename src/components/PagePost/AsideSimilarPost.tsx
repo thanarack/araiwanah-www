@@ -15,7 +15,8 @@ import { BiHash } from 'react-icons/bi';
 import Link from 'next/link';
 import { MockPots } from '../../../configs/constant';
 
-export default function AsideSimilarPost() {
+export default function AsideSimilarPost(props: any) {
+  const { mt } = props;
   const [data, setData] = useState(MockPots);
 
   return (
@@ -25,16 +26,17 @@ export default function AsideSimilarPost() {
       borderRadius="md"
       boxShadow="xs"
       overflow="hidden"
+      mt={mt}
     >
       <Box>
         <Heading as="h5" size="md" p={4}>
-          <Icon
+          {/* <Icon
             as={BiHash}
             pos="relative"
             top={1}
             color="blackAlpha.900"
             fontWeight="normal"
-          />
+          /> */}
           โพสต์ที่คล้ายกัน
         </Heading>
       </Box>

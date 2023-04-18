@@ -43,7 +43,7 @@ export default function RegisterPop(props: any) {
               สร้างบัญชี
             </Button>
           </Link>
-          <Link href="/enter/?state=new-user">
+          <Link href="/enter">
             <Button type="button" colorScheme="gray" variant="ghost" w="full">
               เข้าสู่ระบบ
             </Button>

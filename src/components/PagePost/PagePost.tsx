@@ -9,6 +9,7 @@ import Reaction from './Reaction';
 import AsideSimilarPost from './AsideSimilarPost';
 import { useDispatch } from 'react-redux';
 import { fetchNewPost } from '../../../store/reducers/postPageReducer';
+import AsideAds from './AsideAds';
 
 const PagePost = (props: any) => {
   const dispatch = useDispatch();
@@ -36,6 +37,7 @@ const PagePost = (props: any) => {
           <GridItem colSpan={5}>
             {/* <AsideProfile /> */}
             <AsideSimilarPost />
+            <AsideAds mt={4} />
           </GridItem>
         </Grid>
       </Container>

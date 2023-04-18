@@ -1,5 +1,10 @@
 import LayoutDefault from '../../src/components/LayoutDefault';
+import LoginPage from '../../src/components/Login/LoginPage';
 
 export default function Page() {
-  return <LayoutDefault>New</LayoutDefault>;
+  return (
+    <LayoutDefault>
+      <LoginPage />
+    </LayoutDefault>
+  );
 }
