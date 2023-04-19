@@ -21,7 +21,7 @@ export default function ContentBody() {
       background="white"
       minH="300px"
     >
-      <Box p={9} borderBottom="1px" borderColor="gray.200">
+      <Box p={9} borderBottom="1px" borderColor="blackAlpha.200">
         <PostUser />
         <Heading as="h2" size="lg" mt={4} mb={4}>
           How JWTs Could Be Dangerous and Its Alternatives

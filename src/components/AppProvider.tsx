@@ -10,6 +10,7 @@ import { PersistGate } from 'redux-persist/integration/react';
 import { persistor, store } from '../../store';
 import 'dayjs/locale/th';
 import '../../styles/globals.css';
+import '../../styles/markdown.css';
 
 dayjs.extend(relativeTime);
 dayjs.locale('th');

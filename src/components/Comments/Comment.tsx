@@ -20,14 +20,14 @@ const CommentComponent = (props: any) => {
         <Box>
           <Avatar
             mt={2.5}
-            name="Dan Abrahmov"
+            name={data.userName}
             src={data.userAvatar}
             w={8}
             h={8}
           />
         </Box>
-        <Flex direction="column" gap={1}>
-          <Box borderRadius="xl" border="1px" borderColor="gray.200" w="100%">
+        <Flex direction="column" gap={1} flex={1}>
+          <Box borderRadius="xl" border="1px" borderColor="blackAlpha.200">
             <Box p={4}>
               <Flex gap={2}>
                 <Text fontSize="sm" fontWeight="semibold">
