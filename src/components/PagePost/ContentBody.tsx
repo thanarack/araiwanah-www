@@ -3,6 +3,7 @@
 import { Box, Heading } from '@chakra-ui/react';
 import { useSelector } from 'react-redux';
 import { RootState } from '../../../store';
+import PostComment from '../Comments/PostComment';
 import PostMarkDown from './PostMarkdown';
 import PostUser from './PostUset';
 
@@ -18,15 +19,17 @@ export default function ContentBody() {
       boxShadow="xs"
       borderRadius="md"
       background="white"
-      p={5}
       minH="300px"
     >
-      <Box px={6}>
+      <Box p={9} borderBottom="1px" borderColor="gray.200">
         <PostUser />
         <Heading as="h2" size="lg" mt={4} mb={4}>
           How JWTs Could Be Dangerous and Its Alternatives
         </Heading>
         <PostMarkDown content={getContent?.content} />
+      </Box>
+      <Box p={9}>
+        <PostComment />
       </Box>
     </Box>
   );

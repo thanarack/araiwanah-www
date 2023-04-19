@@ -32,11 +32,11 @@ export const AsideListItems = [
     link: '/about',
     icon: FcAbout,
   },
-  {
-    title: 'คู่มือใช้งาน',
-    link: '/guides',
-    icon: FcAddressBook,
-  },
+  // {
+  //   title: 'คู่มือใช้งาน',
+  //   link: '/guides',
+  //   icon: FcAddressBook,
+  // },
 ];
 
 export const RelevantLinks = [

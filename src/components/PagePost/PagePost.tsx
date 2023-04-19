@@ -10,6 +10,7 @@ import AsideSimilarPost from './AsideSimilarPost';
 import { useDispatch } from 'react-redux';
 import { fetchNewPost } from '../../../store/reducers/postPageReducer';
 import AsideAds from './AsideAds';
+import PostComment from '../Comments/PostComment';
 
 const PagePost = (props: any) => {
   const dispatch = useDispatch();
