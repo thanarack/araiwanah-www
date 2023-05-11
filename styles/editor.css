@@ -1,6 +1,31 @@
 #dynamicMdEditor .md-editor-content .md-editor-input-wrapper textarea {
   padding: 1rem;
-  border-radius: 0.75rem;
+  border-radius: var(--chakra-radii-xl);
+}
+
+#dynamicMdEditor .md-editor-content .md-editor-input-wrapper textarea:focus {
+  /*  */
+}
+
+#dynamicMdEditor
+  .md-editor-content
+  .md-editor-input-wrapper
+  textarea::-webkit-scrollbar {
+  width: 8px;
+}
+
+#dynamicMdEditor
+  .md-editor-content
+  .md-editor-input-wrapper
+  textarea::-webkit-scrollbar-track {
+  background: RGBA(0, 0, 0, 0.08);
+}
+
+#dynamicMdEditor
+  .md-editor-content
+  .md-editor-input-wrapper
+  textarea::-webkit-scrollbar-thumb {
+  background-color: RGBA(0, 0, 0, 0.24);
 }
 
 #dynamicMdEditor.md-editor {
@@ -8,7 +33,17 @@
   height: auto;
   border: 0;
   border-color: 'transparent';
-  border-radius: 0.75rem;
+  border-radius: var(--chakra-radii-xl);
   padding-left: 0;
   padding-right: 0;
+}
+
+
+[placeholder]:empty::before {
+  content: attr(placeholder);
+  color: #555;
+}
+
+[placeholder]:empty:focus::before {
+  content: "";
 }

@@ -28,8 +28,8 @@ const CommentComponent: React.FC<IComment> = (props) => {
             <Box
               height={10}
               width={10}
-              borderBottom={1}
-              borderLeft={1}
+              borderBottom={2}
+              borderLeft={2}
               borderStyle="solid"
               borderColor="gray.100"
               ml={4}
@@ -40,7 +40,7 @@ const CommentComponent: React.FC<IComment> = (props) => {
               height="100%"
               ml={4}
               mt={-2}
-              borderLeft={1}
+              borderLeft={2}
               borderStyle="solid"
               borderColor={showMainLeftLine ? 'gray.100' : 'transparent'}
               width={2}
@@ -62,7 +62,7 @@ const CommentComponent: React.FC<IComment> = (props) => {
             <Box
               height="100%"
               ml={2}
-              borderLeft={1}
+              borderLeft={2}
               borderStyle="solid"
               borderColor="gray.100"
               width={2}
@@ -70,7 +70,7 @@ const CommentComponent: React.FC<IComment> = (props) => {
           )}
         </Flex>
         <Flex direction="column" gap={1} flex={1} pt={pt}>
-          <Box borderRadius="xl" border="1px" borderColor="gray.100">
+          <Box borderRadius="xl" border="2px" borderColor="gray.100">
             <Box p={4}>
               <Flex gap={2}>
                 <Text fontSize="sm" fontWeight="semibold">

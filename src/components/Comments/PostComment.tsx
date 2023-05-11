@@ -1,6 +1,7 @@
 import { Box, Button, Flex, Heading, Text } from '@chakra-ui/react';
 import CommentComponent from './Comment';
 import CommentEditor from './CommentEditor';
+import CommentEditorNormal from './CommentEditorNornal';
 
 const PostComment = (props: any) => {
   const data = new Array(
@@ -94,11 +95,11 @@ const PostComment = (props: any) => {
 
   return (
     <Box test-id="box-comment">
-      <Heading as="h3" size="lg">
+      <Heading as="h3" size="md">
         ความเห็น (29)
       </Heading>
       <Box mt={4}>
-        <CommentEditor />
+        <CommentEditorNormal />
       </Box>
       <Flex mt={4} direction="column">
         {data.map((val, key) => (
