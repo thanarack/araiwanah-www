@@ -125,7 +125,11 @@ const CommentEditorNormal = () => {
             </Box>
 
             {isPreview && (
-              <Box p={4} dangerouslySetInnerHTML={{ __html: previewContent }} />
+              <Box
+                p={4}
+                dangerouslySetInnerHTML={{ __html: previewContent }}
+                wordBreak="break-word"
+              />
             )}
           </Box>
           {isExpended && (
