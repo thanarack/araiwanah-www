@@ -41,6 +41,14 @@ const CommentEditor = () => {
               maxLength={10000}
               preview={false}
               footers={[]}
+              style={{
+                border: 0,
+                borderColor: 'transparent',
+                borderRadius: '0.75rem',
+                paddingLeft: 0,
+                paddingRight: 0,
+                height: 100,
+              }}
             />
           </Box>
         </Flex>
