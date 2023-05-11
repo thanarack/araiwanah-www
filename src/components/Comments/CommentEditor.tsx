@@ -1,10 +1,11 @@
 'use client';
 
 import { Avatar, Box, Flex } from '@chakra-ui/react';
-import { StrictMode, useState } from 'react';
+import { useState } from 'react';
 import dynamic from 'next/dynamic';
-import '../../../styles/editor.css';
+
 import 'md-editor-rt/lib/style.css';
+import '../../../styles/editor.css';
 
 const DynamicMdEditor = dynamic(() => import('md-editor-rt'), {
   loading: () => <p>Loading...</p>,
@@ -41,13 +42,6 @@ const CommentEditor = () => {
               maxLength={10000}
               preview={false}
               footers={[]}
-              style={{
-                border: 0,
-                borderColor: 'transparent',
-                borderRadius: '0.75rem',
-                paddingLeft: 0,
-                paddingRight: 0
-              }}
             />
           </Box>
         </Flex>

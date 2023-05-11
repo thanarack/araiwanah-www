@@ -1,9 +1,14 @@
 #dynamicMdEditor .md-editor-content .md-editor-input-wrapper textarea {
   padding: 1rem;
-  border-radius: '0.75rem';
+  border-radius: 0.75rem;
 }
 
 #dynamicMdEditor.md-editor {
   min-height: 120px;
   height: auto;
+  border: 0;
+  border-color: 'transparent';
+  border-radius: 0.75rem;
+  padding-left: 0;
+  padding-right: 0;
 }
