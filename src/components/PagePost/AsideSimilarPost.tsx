@@ -21,7 +21,6 @@ export default function AsideSimilarPost(props: any) {
 
   return (
     <Box
-      as="aside"
       background="whiteAlpha.600"
       borderRadius="md"
       boxShadow="xs"

@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import React, { StrictMode } from 'react';
 import { ChakraBaseProvider } from '@chakra-ui/react';
 import { extendTheme } from '@chakra-ui/react';
 import { Provider } from 'react-redux';
@@ -45,11 +45,13 @@ const theme = extendTheme({
 
 const AppProvider = ({ children }: { children: React.ReactNode }) => {
   return (
-    <Provider store={store}>
-      <PersistGate loading={null} persistor={persistor}>
-        <ChakraBaseProvider theme={theme}>{children}</ChakraBaseProvider>
-      </PersistGate>
-    </Provider>
+    <StrictMode>
+      <Provider store={store}>
+        <PersistGate loading={null} persistor={persistor}>
+          <ChakraBaseProvider theme={theme}>{children}</ChakraBaseProvider>
+        </PersistGate>
+      </Provider>
+    </StrictMode>
   );
 };
 

@@ -12,22 +12,65 @@ const fromDay = (data: string) => {
   return date.fromNow();
 };
 
-const CommentComponent = (props: any) => {
-  const { data } = props;
+interface IComment {
+  data: any;
+  showMainLeftLine?: boolean;
+  pt?: number;
+}
+
+const CommentComponent: React.FC<IComment> = (props) => {
+  const { data, showMainLeftLine, pt } = props;
   return (
     <Box test-id="comment">
       <Flex direction="row" gap={2}>
-        <Box>
-          <Avatar
-            mt={2.5}
-            name={data.userName}
-            src={data.userAvatar}
-            w={8}
-            h={8}
-          />
-        </Box>
-        <Flex direction="column" gap={1} flex={1}>
-          <Box borderRadius="xl" border="1px" borderColor="blackAlpha.200">
+        {data.parentId && (
+          <Flex direction="column">
+            <Box
+              height={10}
+              width={10}
+              borderBottom={1}
+              borderLeft={1}
+              borderStyle="solid"
+              borderColor="gray.100"
+              ml={4}
+              borderBottomLeftRadius={10}
+              zIndex={2}
+            />
+            <Box
+              height="100%"
+              ml={4}
+              mt={-2}
+              borderLeft={1}
+              borderStyle="solid"
+              borderColor={showMainLeftLine ? 'gray.100' : 'transparent'}
+              width={2}
+              zIndex={0}
+            />
+          </Flex>
+        )}
+        <Flex direction="column" alignItems="center">
+          <Box pt={pt}>
+            <Avatar
+              mt={2.5}
+              name={data.userName}
+              src={data.userAvatar}
+              w={8}
+              h={8}
+            />
+          </Box>
+          {data.subComments && data.subComments.length > 0 && (
+            <Box
+              height="100%"
+              ml={2}
+              borderLeft={1}
+              borderStyle="solid"
+              borderColor="gray.100"
+              width={2}
+            />
+          )}
+        </Flex>
+        <Flex direction="column" gap={1} flex={1} pt={pt}>
+          <Box borderRadius="xl" border="1px" borderColor="gray.100">
             <Box p={4}>
               <Flex gap={2}>
                 <Text fontSize="sm" fontWeight="semibold">
@@ -48,10 +91,28 @@ const CommentComponent = (props: any) => {
             </Box>
           </Box>
           <Flex gap={2}>
-            <Button leftIcon={<AiOutlineHeart />} size="sm" variant="ghost">
+            <Button
+              leftIcon={<AiOutlineHeart />}
+              size="sm"
+              variant="ghost"
+              _hover={{
+                backgroundColor: 'transparent',
+                textDecoration: 'underline',
+              }}
+              _active={{ backgroundColor: 'transparent' }}
+            >
               ถูกใจ
             </Button>
-            <Button leftIcon={<BiCommentDetail />} size="sm" variant="ghost">
+            <Button
+              leftIcon={<BiCommentDetail />}
+              size="sm"
+              variant="ghost"
+              _hover={{
+                backgroundColor: 'transparent',
+                textDecoration: 'underline',
+              }}
+              _active={{ backgroundColor: 'transparent' }}
+            >
               ตอบกลับ
             </Button>
           </Flex>
@@ -59,6 +120,10 @@ const CommentComponent = (props: any) => {
       </Flex>
     </Box>
   );
+};
+
+CommentComponent.defaultProps = {
+  showMainLeftLine: true,
 };
 
 export default CommentComponent;

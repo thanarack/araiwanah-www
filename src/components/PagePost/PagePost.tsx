@@ -35,7 +35,7 @@ const PagePost = (props: any) => {
           <GridItem colSpan={12}>
             <ContentBody />
           </GridItem>
-          <GridItem colSpan={5}>
+          <GridItem colSpan={5} position="relative">
             {/* <AsideProfile /> */}
             <AsideSimilarPost />
             <AsideAds mt={4} />
