@@ -3,5 +3,7 @@
   border-radius: '0.75rem';
 }
 
-#dynamicMdEditor {
+#dynamicMdEditor.md-editor {
+  min-height: 120px;
+  height: auto;
 }

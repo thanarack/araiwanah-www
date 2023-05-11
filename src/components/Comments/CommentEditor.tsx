@@ -46,8 +46,7 @@ const CommentEditor = () => {
                 borderColor: 'transparent',
                 borderRadius: '0.75rem',
                 paddingLeft: 0,
-                paddingRight: 0,
-                height: 100,
+                paddingRight: 0
               }}
             />
           </Box>
