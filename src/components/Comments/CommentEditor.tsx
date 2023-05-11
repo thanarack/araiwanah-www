@@ -3,13 +3,12 @@
 import { Avatar, Box, Flex } from '@chakra-ui/react';
 import { StrictMode, useState } from 'react';
 import dynamic from 'next/dynamic';
-import MdEditor from 'md-editor-rt';
-
+import '../../../styles/editor.css';
 import 'md-editor-rt/lib/style.css';
 
-// const DynamicMdEditor = dynamic(() => import('md-editor-rt'), {
-//   loading: () => <p>Loading...</p>,
-// });
+const DynamicMdEditor = dynamic(() => import('md-editor-rt'), {
+  loading: () => <p>Loading...</p>,
+});
 
 const CommentEditor = () => {
   const [text, setText] = useState('# Hello Editor');
@@ -32,19 +31,17 @@ const CommentEditor = () => {
         </Flex>
         <Flex direction="column" gap={1} flex={1}>
           <Box borderRadius="xl" border="1px" borderColor="gray.100">
-            <Box p={4}>
-              <StrictMode>
-                <MdEditor
-                  modelValue={text}
-                  language="en-US"
-                  onChange={setText}
-                  toolbars={[]}
-                  noUploadImg={true}
-                  maxLength={10000}
-                  preview={false}
-                />
-              </StrictMode>
-            </Box>
+            <DynamicMdEditor
+              editorId="dynamicMdEditor"
+              modelValue={text}
+              language="en-US"
+              onChange={setText}
+              toolbars={[]}
+              noUploadImg={true}
+              maxLength={10000}
+              preview={false}
+              footers={[]}
+            />
           </Box>
         </Flex>
       </Flex>
