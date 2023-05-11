@@ -5,9 +5,7 @@ import {
   Avatar,
   Box,
   Button,
-  EditableInputProps,
   Flex,
-  Textarea,
 } from '@chakra-ui/react';
 import { useRef, useState, useEffect } from 'react';
 import { marked } from 'marked';
@@ -20,11 +18,9 @@ const mapTokenAllow = (tokens: any) => {
       token.type = 'text';
       token.text = token.raw;
     }
-
     if (token.tokens) {
       token.tokens = mapTokenAllow(token.tokens);
     }
-
     return token;
   });
 
@@ -50,17 +46,13 @@ const CommentEditorNormal = () => {
 
   const onPreview = () => {
     const tokens = getAllowToken(text);
-    console.log(tokens);
     const renderer = new marked.Renderer();
     renderer.paragraph = function (text) {
       text = text.replace(/\n+/g, '<br />');
       return '<p>' + text + '</p>';
     };
     renderer.text = function (text) {
-      // Replace space characters with <br> tags
       text = text.replace(/ /g, '<br />');
-
-      // Return the modified text
       return text;
     };
 
@@ -75,11 +67,8 @@ const CommentEditorNormal = () => {
 
   const onSetText = (e: React.FormEvent<HTMLElement>) => {
     const value = String(e.currentTarget.outerText);
-    console.log(value);
     setText(value);
-    if (value.length) {
-      setIsDisabledBtnPreview(false);
-    }
+    setIsDisabledBtnPreview(!value.length);
   };
 
   useEffect(() => {
@@ -137,7 +126,6 @@ const CommentEditorNormal = () => {
                 outline: 'none',
               }}
             />
-
             {isPreview && (
               <Box p={4} dangerouslySetInnerHTML={{ __html: previewContent }} />
             )}
