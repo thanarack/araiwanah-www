@@ -1,12 +1,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 'use client';
 
-import {
-  Avatar,
-  Box,
-  Button,
-  Flex,
-} from '@chakra-ui/react';
+import { Avatar, Box, Button, Flex } from '@chakra-ui/react';
 import { useRef, useState, useEffect } from 'react';
 import { marked } from 'marked';
 import '../../../styles/editor.css';
@@ -104,28 +99,31 @@ const CommentEditorNormal = () => {
               borderStyle: 'solid',
             }}
           >
-            <Box
-              ref={editorRef}
-              id="editorRef"
-              p={4}
-              role="textbox"
-              contentEditable
-              placeholder="เขียนความคิดเห็นหน่อยสิ 😝"
-              onFocus={() => setIsExpended(true)}
-              border={0}
-              minHeight={100}
-              maxHeight={320}
-              overflowY="scroll"
-              onInput={(e: React.FormEvent<HTMLElement>) => onSetText(e)}
-              resize="none"
-              display={!isPreview ? 'block' : 'none'}
-              borderColor="transparent"
-              _focusVisible={{
-                border: 0,
-                borderColor: 'transparent',
-                outline: 'none',
-              }}
-            />
+            <Box p={4} display={!isPreview ? 'block' : 'none'}>
+              <Box
+                ref={editorRef}
+                id="editorRef"
+                role="textbox"
+                width="full"
+                contentEditable
+                placeholder="เขียนความคิดเห็นหน่อยสิ 😝"
+                onFocus={() => setIsExpended(true)}
+                border={0}
+                minHeight={100}
+                maxHeight={320}
+                overflowY="scroll"
+                onInput={(e: React.FormEvent<HTMLElement>) => onSetText(e)}
+                resize="none"
+                borderColor="transparent"
+                wordBreak="break-word"
+                _focusVisible={{
+                  border: 0,
+                  borderColor: 'transparent',
+                  outline: 'none',
+                }}
+              />
+            </Box>
+
             {isPreview && (
               <Box p={4} dangerouslySetInnerHTML={{ __html: previewContent }} />
             )}

@@ -47,3 +47,23 @@
 [placeholder]:empty:focus::before {
   content: "";
 }
+
+#editorRef {
+  z-index: 2;
+  word-break:break-word;
+}
+
+#editorRef::-webkit-scrollbar {
+  width: 8px;
+  z-index: 1;
+}
+
+#editorRef::-webkit-scrollbar-track {
+  background: RGBA(0, 0, 0, 0.08);
+  border-radius: 20px;
+}
+
+#editorRef::-webkit-scrollbar-thumb {
+  background-color: RGBA(0, 0, 0, 0.24);
+  border-radius: 20px;
+}
