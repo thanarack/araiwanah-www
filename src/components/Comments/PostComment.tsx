@@ -97,7 +97,7 @@ const PostComment = (props: any) => {
       <Heading as="h3" size="lg">
         ความเห็น (29)
       </Heading>
-      <Box>
+      <Box mt={4}>
         <CommentEditor />
       </Box>
       <Flex mt={4} direction="column">
