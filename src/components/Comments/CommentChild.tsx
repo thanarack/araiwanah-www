@@ -6,9 +6,12 @@ import CommentComponent from './Comment';
 
 interface ICommentChild {
   postId: string;
+  totalReplyCount: number;
 }
 
 const CommentChild: React.FC<ICommentChild> = (props) => {
+  const { totalReplyCount } = props;
+
   const [comments, setComments] = useState<any[]>([]);
   const [hasMoreComments, setHasMoreComments] = useState<boolean>(true);
 
@@ -32,6 +35,7 @@ const CommentChild: React.FC<ICommentChild> = (props) => {
       <ButtonCountComment
         hasMoreComments={hasMoreComments}
         onFetchComment={onFetchComment}
+        totalReplyCount={totalReplyCount}
       />
     </Box>
   );

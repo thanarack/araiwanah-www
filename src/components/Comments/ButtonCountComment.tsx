@@ -3,15 +3,16 @@ import { useState } from 'react';
 
 interface IButtonCountComment {
   hasMoreComments?: boolean;
+  totalReplyCount: number;
   onFetchComment: () => void;
 }
 
 const ButtonCountComment: React.FC<IButtonCountComment> = (props) => {
-  const { hasMoreComments, onFetchComment } = props;
+  const { hasMoreComments, onFetchComment, totalReplyCount } = props;
 
   const [isShow, setIsShow] = useState<boolean>(false);
 
-  const isDisplayComment = isShow && hasMoreComments
+  const isDisplayComment = isShow && hasMoreComments;
 
   const onHandleShowComment = () => {
     setIsShow(true);
@@ -80,7 +81,7 @@ const ButtonCountComment: React.FC<IButtonCountComment> = (props) => {
               _active={{ backgroundColor: 'transparent' }}
               onClick={onHandleShowComment}
             >
-              การตอบกลับ 1 รายการ
+              การตอบกลับ {totalReplyCount} รายการ
             </Button>
           </Flex>
         )}

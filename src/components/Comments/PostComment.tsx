@@ -25,7 +25,9 @@ const PostComment = (props: any) => {
               showMainLeftLine
               pt={!key ? 0 : 2}
             />
-            {val.totalReplyCount > 0 && <CommentChild postId={val.id} />}
+            {val.totalReplyCount > 0 && (
+              <CommentChild postId={val.id} totalReplyCount={val.totalReplyCount} />
+            )}
           </>
         ))}
       </Flex>
