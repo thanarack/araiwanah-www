@@ -284,3 +284,134 @@ export const ProfileListItems = [
     icon: FcAddressBook,
   },
 ];
+
+export const Posts = [
+  {
+    id: '1',
+    userAvatar:
+      'https://res.cloudinary.com/practicaldev/image/fetch/s--f5MFL0Ey--/c_fill,f_auto,fl_progressive,h_50,q_auto,w_50/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/38578/c785dfe1-aaa2-48fe-89b9-1563db95c85c.jpg',
+    userName: 'Michael Tharrington',
+    userId: 'sdadas848qwdqwd',
+    createdAt: '2019-07-04 22:00:00',
+    comment: `<p>รีวิว โทรโข่ง แพนด้าแฟร์ ซาฟารีแอปเปิล เอ็นทรานซ์ซัมเมอร์เฟรช เด้อ มายาคติ เอาต์เบอร์รี บ๋อยไอซ์แอปเปิลโลโก้ ไชน่าโบว์ลิ่ง ออทิสติก ซ้อเพนกวิน เก๋ากี้สเตอริโอโฮสเตส ลาเต้ แอปพริคอทเป็นไงบาบูนอิกัวนาล้มเหลว เบญจมบพิตรช็อปปิ้ง</p><p>Thank you (insert preferred deity here) for Open Source ^_^</p>`,
+    totalLikeCount: 0,
+    totalReplyCount: 3,
+    subComments: [
+      {
+        id: '3',
+        parentId: '1',
+        userAvatar:
+          'https://res.cloudinary.com/practicaldev/image/fetch/s--f5MFL0Ey--/c_fill,f_auto,fl_progressive,h_50,q_auto,w_50/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/38578/c785dfe1-aaa2-48fe-89b9-1563db95c85c.jpg',
+        userName: 'Michael Tharrington',
+        userId: 'sdadas848qwdqwd',
+        createdAt: '2019-07-04 22:00:00',
+        comment: `<p>รีวิว โทรโข่ง แพนด้าแฟร์ ซาฟารีแอปเปิล เอ็นทรานซ์ซัมเมอร์เฟรช เด้อ มายาคติ เอาต์เบอร์รี บ๋อยไอซ์แอปเปิลโลโก้ ไชน่าโบว์ลิ่ง ออทิสติก ซ้อเพนกวิน เก๋ากี้สเตอริโอโฮสเตส ลาเต้ แอปพริคอทเป็นไงบาบูนอิกัวนาล้มเหลว เบญจมบพิตรช็อปปิ้ง</p><p>Thank you (insert preferred deity here) for Open Source ^_^</p>`,
+        totalLikeCount: 0,
+        totalReplyCount: 0,
+      },
+      {
+        id: '3',
+        parentId: '1',
+        userAvatar:
+          'https://res.cloudinary.com/practicaldev/image/fetch/s--f5MFL0Ey--/c_fill,f_auto,fl_progressive,h_50,q_auto,w_50/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/38578/c785dfe1-aaa2-48fe-89b9-1563db95c85c.jpg',
+        userName: 'Michael Tharrington',
+        userId: 'sdadas848qwdqwd',
+        createdAt: '2019-07-04 22:00:00',
+        comment: `<p>รีวิว โทรโข่ง แพนด้าแฟร์ ซาฟารีแอปเปิล เอ็นทรานซ์ซัมเมอร์เฟรช เด้อ มายาคติ เอาต์เบอร์รี บ๋อยไอซ์แอปเปิลโลโก้ ไชน่าโบว์ลิ่ง ออทิสติก ซ้อเพนกวิน เก๋ากี้สเตอริโอโฮสเตส ลาเต้ แอปพริคอทเป็นไงบาบูนอิกัวนาล้มเหลว เบญจมบพิตรช็อปปิ้ง</p><p>Thank you (insert preferred deity here) for Open Source ^_^</p>`,
+        totalLikeCount: 0,
+        totalReplyCount: 0,
+      },
+      {
+        id: '5',
+        parentId: '1',
+        userAvatar:
+          'https://res.cloudinary.com/practicaldev/image/fetch/s--f5MFL0Ey--/c_fill,f_auto,fl_progressive,h_50,q_auto,w_50/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/38578/c785dfe1-aaa2-48fe-89b9-1563db95c85c.jpg',
+        userName: 'Michael Tharrington',
+        userId: 'sdadas848qwdqwd',
+        createdAt: '2019-07-04 22:00:00',
+        comment: `<p>รีวิว โทรโข่ง แพนด้าแฟร์ ซาฟารีแอปเปิล เอ็นทรานซ์ซัมเมอร์เฟรช เด้อ มายาคติ เอาต์เบอร์รี บ๋อยไอซ์แอปเปิลโลโก้ ไชน่าโบว์ลิ่ง ออทิสติก ซ้อเพนกวิน เก๋ากี้สเตอริโอโฮสเตส ลาเต้ แอปพริคอทเป็นไงบาบูนอิกัวนาล้มเหลว เบญจมบพิตรช็อปปิ้ง</p><p>Thank you (insert preferred deity here) for Open Source ^_^</p>`,
+        totalLikeCount: 0,
+        totalReplyCount: 0,
+      },
+    ],
+  },
+  {
+    id: '2',
+    userAvatar:
+      'https://res.cloudinary.com/practicaldev/image/fetch/s--f5MFL0Ey--/c_fill,f_auto,fl_progressive,h_50,q_auto,w_50/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/38578/c785dfe1-aaa2-48fe-89b9-1563db95c85c.jpg',
+    userName: 'Michael Tharrington',
+    userId: 'sdadas848qwdqwd',
+    createdAt: '2023-04-19 22:00:00',
+    comment: `<p>I was able to quit my job and create a new and successful company in 3 days :D</p><p>Thank you (insert preferred deity here) for Open Source ^_^</p>`,
+    totalLikeCount: 0,
+    totalReplyCount: 1,
+    subComments: [
+      {
+        id: '8',
+        parentId: '1',
+        userAvatar:
+          'https://res.cloudinary.com/practicaldev/image/fetch/s--f5MFL0Ey--/c_fill,f_auto,fl_progressive,h_50,q_auto,w_50/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/38578/c785dfe1-aaa2-48fe-89b9-1563db95c85c.jpg',
+        userName: 'Michael Tharrington',
+        userId: 'sdadas848qwdqwd',
+        createdAt: '2019-07-04 22:00:00',
+        comment: `<p>รีวิว โทรโข่ง แพนด้าแฟร์ ซาฟารีแอปเปิล เอ็นทรานซ์ซัมเมอร์เฟรช เด้อ มายาคติ เอาต์เบอร์รี บ๋อยไอซ์แอปเปิลโลโก้ ไชน่าโบว์ลิ่ง ออทิสติก ซ้อเพนกวิน เก๋ากี้สเตอริโอโฮสเตส ลาเต้ แอปพริคอทเป็นไงบาบูนอิกัวนาล้มเหลว เบญจมบพิตรช็อปปิ้ง</p><p>Thank you (insert preferred deity here) for Open Source ^_^</p>`,
+        totalLikeCount: 0,
+        totalReplyCount: 0,
+      },
+    ],
+  },
+  {
+    id: '6',
+    userAvatar:
+      'https://res.cloudinary.com/practicaldev/image/fetch/s--f5MFL0Ey--/c_fill,f_auto,fl_progressive,h_50,q_auto,w_50/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/38578/c785dfe1-aaa2-48fe-89b9-1563db95c85c.jpg',
+    userName: 'Michael Tharrington',
+    userId: 'sdadas848qwdqwd',
+    createdAt: '2023-04-19 22:00:00',
+    comment: `<p>I was able to quit my job and create a new and successful company in 3 days :D</p><p>Thank you (insert preferred deity here) for Open Source ^_^</p>`,
+    totalLikeCount: 0,
+    totalReplyCount: 0,
+    subComments: [],
+  },
+];
+
+export const Comments = [
+  {
+    id: '3',
+    parentId: '1',
+    userAvatar:
+      'https://res.cloudinary.com/practicaldev/image/fetch/s--imZn60gZ--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/714379/ca80c2f5-411e-49b8-a8f9-c81b6d0f732d.jpeg',
+    userName: 'MySubMent Chat',
+    userId: 'sdadas848qwdqwd',
+    createdAt: '2019-07-04 22:00:00',
+    comment: `<p>Comments 1</p>`,
+    totalLikeCount: 0,
+    totalReplyCount: 0,
+    subComments: [],
+  },
+  {
+    id: '6',
+    parentId: '1',
+    userAvatar:
+      'https://res.cloudinary.com/practicaldev/image/fetch/s--imZn60gZ--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/714379/ca80c2f5-411e-49b8-a8f9-c81b6d0f732d.jpeg',
+    userName: 'MySubMent Chat',
+    userId: 'sdadas848qwdqwd',
+    createdAt: '2019-07-04 22:00:00',
+    comment: `<p>Comments 2</p>`,
+    totalLikeCount: 0,
+    totalReplyCount: 0,
+    subComments: [],
+  },
+  {
+    id: '7',
+    parentId: '1',
+    userAvatar:
+      'https://res.cloudinary.com/practicaldev/image/fetch/s--imZn60gZ--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/714379/ca80c2f5-411e-49b8-a8f9-c81b6d0f732d.jpeg',
+    userName: 'MySubMent Chat',
+    userId: 'sdadas848qwdqwd',
+    createdAt: '2019-07-04 22:00:00',
+    comment: `<p>Comments 3</p>`,
+    totalLikeCount: 0,
+    totalReplyCount: 0,
+    subComments: [],
+  }
+];

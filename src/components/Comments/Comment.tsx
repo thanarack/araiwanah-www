@@ -2,6 +2,7 @@ import dayjs from 'dayjs';
 import { Avatar, Box, Button, Flex, Text } from '@chakra-ui/react';
 import { AiOutlineHeart } from 'react-icons/ai';
 import { BiCommentDetail } from 'react-icons/bi';
+import CommentEditorNormal from './CommentEditorNornal';
 
 const fromDay = (data: string) => {
   const date = dayjs(data);
@@ -16,10 +17,11 @@ interface IComment {
   data: any;
   showMainLeftLine?: boolean;
   pt?: number;
+  lastChildComment?: boolean;
 }
 
 const CommentComponent: React.FC<IComment> = (props) => {
-  const { data, showMainLeftLine, pt } = props;
+  const { data, showMainLeftLine, pt, lastChildComment } = props;
   return (
     <Box test-id="comment">
       <Flex direction="row" gap={2}>
@@ -118,12 +120,19 @@ const CommentComponent: React.FC<IComment> = (props) => {
           </Flex>
         </Flex>
       </Flex>
+
+      {lastChildComment && (
+        <Box width="full">
+          <CommentEditorNormal isChildComment pt={2} />
+        </Box>
+      )}
     </Box>
   );
 };
 
 CommentComponent.defaultProps = {
   showMainLeftLine: true,
+  lastChildComment: false,
 };
 
 export default CommentComponent;

@@ -30,7 +30,8 @@ const getAllowToken = (text: string) => {
   return tokens;
 };
 
-const CommentEditorNormal = () => {
+const CommentEditorNormal = (props: any) => {
+  const { isChildComment, pt } = props;
   const [previewContent, setPreviewContent] = useState<string>('');
   const [isDisabledBtnPreview, setIsDisabledBtnPreview] =
     useState<boolean>(true);
@@ -73,20 +74,45 @@ const CommentEditorNormal = () => {
   return (
     <Box test-id="comment">
       <Flex direction="row" gap={2}>
+        {isChildComment && (
+          <Flex direction="column">
+            <Box
+              height={10}
+              width={10}
+              borderBottom={2}
+              borderLeft={2}
+              borderStyle="solid"
+              borderColor="gray.100"
+              ml={4}
+              borderBottomLeftRadius={10}
+              zIndex={2}
+            />
+            <Box
+              height="100%"
+              ml={4}
+              mt={-2}
+              borderLeft={2}
+              borderStyle="solid"
+              borderColor="transparent"
+              width={2}
+              zIndex={0}
+            />
+          </Flex>
+        )}
         <Flex direction="column" alignItems="center">
-          <Box>
+          <Box pt={pt}>
             <Avatar
               mt={2.5}
               name="Test"
               src={
-                'https://res.cloudinary.com/practicaldev/image/fetch/s--f5MFL0Ey--/c_fill,f_auto,fl_progressive,h_50,q_auto,w_50/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/38578/c785dfe1-aaa2-48fe-89b9-1563db95c85c.jpg'
+                'https://res.cloudinary.com/practicaldev/image/fetch/s--7fPr9eUD--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/291763/67acdcdc-2d99-4098-b8bc-af5a3b89a590.jpg'
               }
               w={8}
               h={8}
             />
           </Box>
         </Flex>
-        <Flex direction="column" gap={1} flex={1}>
+        <Flex direction="column" gap={1} flex={1} pt={pt}>
           <Box
             borderRadius="xl"
             border="2px"
@@ -99,11 +125,12 @@ const CommentEditorNormal = () => {
               borderStyle: 'solid',
             }}
           >
-            <Box p={4} display={!isPreview ? 'block' : 'none'}>
+            <Box p={4} pr={2} display={!isPreview ? 'block' : 'none'}>
               <Box
                 ref={editorRef}
                 id="editorRef"
                 role="textbox"
+                pr={1}
                 width="full"
                 contentEditable
                 placeholder="เขียนความคิดเห็นหน่อยสิ 😝"
