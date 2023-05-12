@@ -75,16 +75,16 @@ const CommentEditorNormal = (props: any) => {
     <Box test-id="comment">
       <Flex direction="row" gap={2}>
         {isChildComment && (
-          <Flex direction="column">
+          <Box>
             <Box
-              height={10}
+              height={9}
               width={10}
               borderBottom={2}
               borderLeft={2}
               borderStyle="solid"
               borderColor="gray.100"
               ml={4}
-              borderBottomLeftRadius={10}
+              borderBottomLeftRadius={12}
               zIndex={2}
             />
             <Box
@@ -97,7 +97,7 @@ const CommentEditorNormal = (props: any) => {
               width={2}
               zIndex={0}
             />
-          </Flex>
+          </Box>
         )}
         <Flex direction="column" alignItems="center">
           <Box pt={pt}>
