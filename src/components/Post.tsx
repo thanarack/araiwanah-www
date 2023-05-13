@@ -30,18 +30,12 @@ export default function Post(props: any) {
           src={data.user.picture}
           alt={data.user.name}
           borderRadius="full"
-          boxSize="32px"
+          width={9}
+          height={9}
         />
-        <Flex direction="column" alignContent="space-around" mt={-1.5}>
+        <Flex direction="column" alignContent="space-around" mt={-1}>
           <Link href={userUrl}>
-            <Button
-
-              px={1}
-              py={1}
-              h="auto"
-              type="button"
-              variant='link'
-            >
+            <Button px={1} py={1} type="button" variant="link">
               <Text as="span" color="blackAlpha.700" fontSize="sm">
                 {data.user.name}
               </Text>
@@ -49,18 +43,19 @@ export default function Post(props: any) {
           </Link>
           <Text
             as="time"
-            lineHeight={1.5}
             pl={1}
             color="blackAlpha.600"
+            fontWeight="normal"
             noOfLines={1}
             fontSize="xs"
             cursor="default"
+            mt={-0.5}
           >
             {dayjs(data.post.createAt).format('DD MMM YYYY')}
           </Text>
         </Flex>
       </Flex>
-      <Box pl="44px" mt={1.5}>
+      <Box pl={12} mt={2}>
         {/* Title */}
         <Link href={postLink}>
           <Heading
@@ -78,26 +73,16 @@ export default function Post(props: any) {
           </Heading>
         </Link>
         {/* Tags */}
-        <Wrap mt={1} spacing={0}>
+        <Wrap mt={1} spacing={0} ml={-3}>
           {data.post.tags.map((val: any, index: number) => (
             <WrapItem key={index} mb={0}>
               <Link href={'/t/' + val.tag}>
                 <Button
                   type="button"
                   fontWeight="normal"
-                  fontSize="sm"
-                  color="blackAlpha.700"
-                  background="transparent"
-                  borderWidth="1px"
-                  borderColor="transparent"
-                  px={1.5}
-                  py={1.5}
-                  h="auto"
-                  _hover={{
-                    background: 'blackAlpha.100',
-                    borderWidth: '1px',
-                    borderColor: 'blackAlpha.300',
-                  }}
+                  variant="ghost"
+                  size="sm"
+                  px={2}
                 >
                   <Icon
                     as={BiHash}
@@ -113,51 +98,31 @@ export default function Post(props: any) {
           ))}
         </Wrap>
         {/* Reaction */}
-        <Flex mt={2} ml={-1}>
+        <Flex mt={4} ml={-3}>
           {data.post.countReaction > 0 && (
             <Box>
-              <Button
-                type="button"
-                background="transparent"
-                h="auto"
-                px={3}
-                py={1.5}
-                _hover={{
-                  background: 'blackAlpha.50',
-                }}
-              >
+              <Button type="button" variant="ghost" size="sm">
                 <Flex
-                  color="blackAlpha.700"
                   fontSize="sm"
                   fontWeight="normal"
                   alignItems="center"
-                  gap={2}
+                  gap={1.5}
                 >
-                  <Icon as={AiOutlineHeart} w={5} h={5} />
-                  <Text>{data.post.countReaction} ความสนใจ</Text>
+                  <Icon as={AiOutlineHeart} w={4} h={4} />
+                  <Text>{data.post.countReaction} รักเลย</Text>
                 </Flex>
               </Button>
             </Box>
           )}
           <Box>
-            <Button
-              type="button"
-              background="transparent"
-              h="auto"
-              px={3}
-              py={1.5}
-              _hover={{
-                background: 'blackAlpha.50',
-              }}
-            >
+            <Button type="button" variant="ghost" size="sm">
               <Flex
-                color="blackAlpha.700"
                 fontSize="sm"
                 fontWeight="normal"
                 alignItems="center"
-                gap={2}
+                gap={1.5}
               >
-                <Icon as={BiCommentDetail} w={5} h={5} />
+                <Icon as={BiCommentDetail} w={4} h={4} />
                 {data.post.countComment === 0 && <Text>แสดงความคิดเห็น</Text>}
                 {data.post.countComment > 0 && (
                   <Text>{data.post.countLike} ความคิดเห็น</Text>
@@ -166,25 +131,14 @@ export default function Post(props: any) {
             </Button>
           </Box>
           <Box ml="auto">
-            <Button
-              type="button"
-              background="transparent"
-              h="auto"
-              px={0.5}
-              py={1.5}
-              title="บันทึกไว้อ่านภายหลัง"
-              _hover={{
-                background: 'blackAlpha.50',
-              }}
-            >
+            <Button type="button" variant="ghost" size="sm">
               <Flex
-                color="blackAlpha.600"
                 fontSize="sm"
                 fontWeight="normal"
                 alignItems="center"
-                gap={2}
+                gap={1.5}
               >
-                <Icon as={BiBookmark} w={5} h={5} />
+                <Icon as={BiBookmark} w={4} h={4} />
               </Flex>
             </Button>
           </Box>
