@@ -73,7 +73,7 @@ export default function Post(props: any) {
           </Heading>
         </Link>
         {/* Tags */}
-        <Wrap mt={1} spacing={0} ml={-3}>
+        <Wrap mt={1} spacing={0} ml={-2.5}>
           {data.post.tags.map((val: any, index: number) => (
             <WrapItem key={index} mb={0}>
               <Link href={'/t/' + val.tag}>
@@ -109,7 +109,7 @@ export default function Post(props: any) {
                   gap={1.5}
                 >
                   <Icon as={AiOutlineHeart} w={4} h={4} />
-                  <Text>{data.post.countReaction} รักเลย</Text>
+                  <Text>{data.post.countReaction} ถูกใจ</Text>
                 </Flex>
               </Button>
             </Box>
