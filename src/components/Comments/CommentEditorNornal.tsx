@@ -47,10 +47,10 @@ const CommentEditorNormal = (props: any) => {
       text = text.replace(/\n+/g, '<br />');
       return '<p>' + text + '</p>';
     };
-    renderer.text = function (text) {
-      text = text.replace(/ /g, '<br />');
-      return text;
-    };
+    // renderer.text = function (text) {
+    //   text = text.replace(/ /g, '<br />');
+    //   return text;
+    // };
 
     const options = {
       renderer: renderer,
