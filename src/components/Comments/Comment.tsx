@@ -3,6 +3,7 @@ import { Avatar, Box, Button, Flex, Text } from '@chakra-ui/react';
 import { AiOutlineHeart } from 'react-icons/ai';
 import { BiCommentDetail } from 'react-icons/bi';
 import CommentEditorNormal from './CommentEditorNornal';
+import Link from 'next/link';
 
 const fromDay = (data: string) => {
   const date = dayjs(data);
@@ -52,13 +53,15 @@ const CommentComponent: React.FC<IComment> = (props) => {
         )}
         <Flex direction="column" alignItems="center">
           <Box pt={pt}>
-            <Avatar
-              mt={2.5}
-              name={data.userName}
-              src={data.userAvatar}
-              w={8}
-              h={8}
-            />
+            <Link href="/u/1">
+              <Avatar
+                mt={2.5}
+                name={data.userName}
+                src={data.userAvatar}
+                w={8}
+                h={8}
+              />
+            </Link>
           </Box>
           {data.subComments && data.subComments.length > 0 && (
             <Box
@@ -75,11 +78,13 @@ const CommentComponent: React.FC<IComment> = (props) => {
           <Box borderRadius="xl" border="2px" borderColor="gray.100">
             <Box p={4}>
               <Flex gap={2} align="center">
-                <Text fontSize="sm" fontWeight="semibold">
-                  {data.userName}
-                </Text>
-                <Text color="blackAlpha.500">•</Text>
-                <Text color="blackAlpha.500" fontWeight="normal" fontSize="xs">
+                <Link href="/u/1">
+                  <Text fontSize="sm" color="gray.600" fontWeight="semibold">
+                    {data.userName}
+                  </Text>
+                </Link>
+                <Text color="gray.400">•</Text>
+                <Text color="gray.400" fontWeight="normal" fontSize="xs">
                   {fromDay(data.createdAt)}
                 </Text>
               </Flex>

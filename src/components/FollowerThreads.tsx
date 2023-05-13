@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import {
+  Avatar,
   Box,
   Button,
   Flex,
@@ -14,11 +15,54 @@ import {
 import { BiHash } from 'react-icons/bi';
 import { MockPots } from '../../configs/constant';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 
 export default function FollowerThreads(props: any) {
   const { title, mt } = props;
+  const router = useRouter();
 
-  const [data, setData] = useState([]);
+  const [data, setData] = useState([
+    {
+      id: '1',
+      username: 'Thanarak Chaisri',
+      slug: 'bank',
+      image: 'https://bit.ly/sage-adebayo',
+    },
+    {
+      id: '1',
+      username: 'Thanarak Chaisri',
+      slug: 'bank',
+      image: 'https://bit.ly/sage-adebayo',
+    },
+    ,
+    {
+      id: '1',
+      username: 'Thanarak Chaisri',
+      slug: 'bank',
+      image: 'https://bit.ly/sage-adebayo',
+    },
+    {
+      id: '1',
+      username: 'Thanarak Chaisri',
+      slug: 'bank',
+      image: 'https://bit.ly/sage-adebayo',
+    },
+    {
+      id: '1',
+      username: 'Thanarak Chaisri',
+      slug: 'bank',
+      image: 'https://bit.ly/sage-adebayo',
+    },
+  ]);
+
+  const onClickView = (userSlug: any) => {
+    router.push('/u/' + userSlug);
+  };
+
+  const onClickFollow = (e: any) => {
+    console.log('2');
+    e.stopPropagation();
+  };
 
   return (
     <Box
@@ -37,39 +81,71 @@ export default function FollowerThreads(props: any) {
         {data.length > 0 && (
           <List>
             {data.map((val: any, index: number) => (
-              <ListItem key={index}>
-                <Link href={'/p/' + val.post.postId}>
-                  <Flex
-                    direction="column"
-                    py={4}
-                    px={4}
-                    _hover={{ background: 'whiteAlpha.900' }}
+              <ListItem
+                key={index}
+                px={4}
+                py={2}
+                role="button"
+                onClick={() => onClickView(val.slug)}
+                _hover={{ background: 'gray.100' }}
+              >
+                <Flex gap={2} alignItems="center">
+                  <Box
+                    alignSelf="center"
+                    justifySelf="center"
+                    justifyItems="center"
                   >
-                    <Text>{val.post.title}</Text>
-                    <Box mt={1}>
-                      {val.post.countComment > 0 && (
-                        <Text>{val.post.countComment} ความเห็น</Text>
-                      )}
-                      {val.post.countComment === 0 && (
-                        <Text
-                          background="orange.200"
-                          width="fit-content"
-                          fontSize="sm"
-                          borderRadius="md"
-                          px={1.5}
-                          py={0.5}
-                          h="auto"
-                        >
-                          ใหม่
-                        </Text>
-                      )}
-                    </Box>
+                    <Avatar name={val.username} src={val.image} w={9} h={9} />
+                  </Box>
+                  <Flex direction="column" flex={1}>
+                    <Text
+                      fontWeight="semibold"
+                      mt={0.5}
+                      fontSize="sm"
+                      color="gray.600"
+                      noOfLines={1}
+                    >
+                      {val.username}
+                    </Text>
+                    <Text
+                      fontSize="sm"
+                      noOfLines={1}
+                      mt={-0.5}
+                      color="gray.400"
+                    >
+                      @{val.slug}
+                    </Text>
                   </Flex>
-                </Link>
+                  <Box>
+                    <Button
+                      onClick={onClickFollow}
+                      role="button"
+                      colorScheme="twitter"
+                      variant="outline"
+                      size="sm"
+                    >
+                      ติดตาม
+                    </Button>
+                  </Box>
+                </Flex>
               </ListItem>
             ))}
           </List>
         )}
+        <Box px={4} py={2} _hover={{ background: 'gray.100' }}>
+          <Link href="/connect_people">
+            <Button
+              variant="link"
+              justifyContent="start"
+              colorScheme="gray"
+              fontSize="sm"
+              fontWeight="normal"
+              width="full"
+            >
+              แสดงเพิ่มเติม
+            </Button>
+          </Link>
+        </Box>
       </Box>
     </Box>
   );

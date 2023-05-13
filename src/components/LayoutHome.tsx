@@ -9,8 +9,10 @@ import Threads from './Threads';
 
 export default function LayoutHome({
   children,
+  isFollower,
 }: {
   children: React.ReactNode;
+  isFollower?: boolean;
 }) {
   return (
     <>
@@ -22,15 +24,14 @@ export default function LayoutHome({
           </GridItem>
           <GridItem colSpan={10}>{children}</GridItem>
           <GridItem colSpan={5}>
-            <Threads
-              title="ข่าวรับสมัครงาน"
-              tag={['รับสมัครงาน', 'งานราชการ', 'งานเอกชน']}
-              mt={4}
-            />
-            <FollowerThreads
-              title="แนะนำผู้ใช้"
-              mt={4}
-            />
+            {isFollower && <FollowerThreads title="แนะนำผู้ใช้" mt={4} />}
+            {!isFollower && (
+              <Threads
+                title="โพสต์ล่าสุด"
+                tag={['รับสมัครงาน', 'งานราชการ', 'งานเอกชน']}
+                mt={4}
+              />
+            )}
           </GridItem>
         </Grid>
       </Container>
@@ -38,3 +39,7 @@ export default function LayoutHome({
     </>
   );
 }
+
+LayoutHome.defaultProps = {
+  isFollower: true,
+};

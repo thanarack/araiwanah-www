@@ -23,7 +23,7 @@ export default function AvatarComponent(props: any) {
       boxShadow="xs"
       overflow="hidden"
     >
-      <Box p={4}>
+      <Box py={6}>
         <Flex justifyContent="center" align="center" direction="column">
           <WrapItem>
             <Avatar
@@ -34,7 +34,7 @@ export default function AvatarComponent(props: any) {
           </WrapItem>
           <Button mt={3} size="sm" colorScheme='twitter'>ติดตาม</Button>
           <Text mt={3}>Thanarak Chaisri</Text>
-          <Text fontSize="sm" color="blackAlpha.600">
+          <Text fontSize="sm" color="gray.400">
             เข้าร่วม 13 ธ.ค. 2562
           </Text>
         </Flex>

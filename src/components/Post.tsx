@@ -1,6 +1,7 @@
 'use client';
 
 import {
+  Avatar,
   Box,
   Button,
   Flex,
@@ -16,27 +17,35 @@ import Link from 'next/link';
 import { BiBookmark } from 'react-icons/bi';
 import { AiOutlineHeart } from 'react-icons/ai';
 import { BiHash, BiCommentDetail } from 'react-icons/bi';
+import { useRouter } from 'next/navigation';
 
 export default function Post(props: any) {
   const { data } = props;
 
+  const router = useRouter();
+
   const userUrl = '/u/' + data.user.slug;
   const postLink = '/p/' + data.post.postId;
+
+  const onComment = () => {
+    router.push(postLink + '#post-comment');
+  };
 
   return (
     <Box boxShadow="xs" borderRadius="md" background="white" p={5}>
       <Flex gap={2}>
-        <Image
-          src={data.user.picture}
-          alt={data.user.name}
-          borderRadius="full"
-          width={9}
-          height={9}
-        />
+        <Link href={userUrl}>
+          <Avatar
+            src={data.user.picture}
+            title={data.user.name}
+            width={9}
+            height={9}
+          />
+        </Link>
         <Flex direction="column" alignContent="space-around" mt={-1}>
           <Link href={userUrl}>
             <Button px={1} py={1} type="button" variant="link">
-              <Text as="span" color="blackAlpha.700" fontSize="sm">
+              <Text as="span" color="gray.600" fontSize="sm">
                 {data.user.name}
               </Text>
             </Button>
@@ -44,7 +53,7 @@ export default function Post(props: any) {
           <Text
             as="time"
             pl={1}
-            color="blackAlpha.600"
+            color="gray.400"
             fontWeight="normal"
             noOfLines={1}
             fontSize="xs"
@@ -75,7 +84,7 @@ export default function Post(props: any) {
         {/* Tags */}
         <Wrap mt={1} spacing={0} ml={-2.5}>
           {data.post.tags.map((val: any, index: number) => (
-            <WrapItem key={index} mb={0}>
+            <WrapItem key={index} mb={0} color="gray.900">
               <Link href={'/t/' + val.tag}>
                 <Button
                   type="button"
@@ -88,7 +97,6 @@ export default function Post(props: any) {
                     as={BiHash}
                     pos="relative"
                     top={0}
-                    color="blackAlpha.500"
                     fontWeight="normal"
                   />
                   {val.tag}
@@ -121,6 +129,7 @@ export default function Post(props: any) {
                 fontWeight="normal"
                 alignItems="center"
                 gap={1.5}
+                onClick={() => onComment()}
               >
                 <Icon as={BiCommentDetail} w={4} h={4} />
                 {data.post.countComment === 0 && <Text>แสดงความคิดเห็น</Text>}

@@ -29,7 +29,9 @@ export default function ContentBody() {
         <PostMarkDown content={getContent?.content} />
       </Box>
       <Box p={9}>
-        <PostComment />
+        <Box id="post-comment">
+          <PostComment />
+        </Box>
       </Box>
     </Box>
   );
