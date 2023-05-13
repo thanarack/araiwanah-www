@@ -5,7 +5,7 @@ export const metadata = {
     default: 'exolog',
     template: '%s | exolog',
   },
-}
+};
 
 export default function RootLayout({
   children,

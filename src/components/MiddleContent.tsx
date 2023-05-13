@@ -8,7 +8,7 @@ export default function MiddleContent() {
   return (
     <Box>
       <NavigationRelevant />
-      <PostLists mt={1.5}/>
+      <PostLists mt={2}/>
     </Box>
   );
 }

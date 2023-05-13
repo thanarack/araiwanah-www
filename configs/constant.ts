@@ -27,11 +27,11 @@ export const AsideListItems = [
     link: '/faq',
     icon: FcFaq,
   },
-  {
-    title: 'นโยบายการใช้งาน',
-    link: '/term',
-    icon: FcAbout,
-  },
+  // {
+  //   title: 'นโยบายการใช้งาน',
+  //   link: '/term',
+  //   icon: FcAbout,
+  // },
   // {
   //   title: 'คู่มือใช้งาน',
   //   link: '/guides',
@@ -43,14 +43,17 @@ export const RelevantLinks = [
   {
     title: 'เกี่ยวข้อง',
     link: '/',
+    key: '',
   },
   {
     title: 'ล่าสุด',
     link: '/latest',
+    key: 'latest',
   },
   {
     title: 'ยอดเข้าดู',
     link: '/top/week',
+    key: 'top-week',
   },
 ];
 
@@ -413,5 +416,5 @@ export const Comments = [
     totalLikeCount: 0,
     totalReplyCount: 0,
     subComments: [],
-  }
+  },
 ];

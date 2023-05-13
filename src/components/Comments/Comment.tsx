@@ -74,11 +74,12 @@ const CommentComponent: React.FC<IComment> = (props) => {
         <Flex direction="column" gap={1} flex={1} pt={pt}>
           <Box borderRadius="xl" border="2px" borderColor="gray.100">
             <Box p={4}>
-              <Flex gap={2}>
+              <Flex gap={2} align="center">
                 <Text fontSize="sm" fontWeight="semibold">
                   {data.userName}
                 </Text>
-                <Text color="blackAlpha.600" fontWeight="normal" fontSize="sm">
+                <Text color="blackAlpha.500">•</Text>
+                <Text color="blackAlpha.500" fontWeight="normal" fontSize="xs">
                   {fromDay(data.createdAt)}
                 </Text>
               </Flex>

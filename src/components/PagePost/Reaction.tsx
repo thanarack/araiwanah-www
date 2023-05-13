@@ -11,7 +11,7 @@ export default function Reaction() {
       <Flex
         direction="column"
         justifyItems="center"
-        alignItems="center"
+        alignItems="end"
         gap={8}
         color="blackAlpha.700"
       >

@@ -29,10 +29,10 @@ const PagePost = (props: any) => {
     <Box>
       <Container as="main" maxWidth="1280" mt={20}>
         <Grid templateColumns="repeat(18, 1fr)" gap={4}>
-          <GridItem colSpan={1}>
+          <GridItem colSpan={2}>
             <Reaction />
           </GridItem>
-          <GridItem colSpan={12}>
+          <GridItem colSpan={11}>
             <ContentBody />
           </GridItem>
           <GridItem colSpan={5} position="relative">

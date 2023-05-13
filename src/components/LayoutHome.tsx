@@ -4,7 +4,8 @@ import { Container, Grid, GridItem } from '@chakra-ui/react';
 import AsideLeft from '../../src/components/AsideLeft';
 import Footer from '../../src/components/Footer';
 import Navbar from '../../src/components/Navbar';
-import Threads from '../../src/components/Threads';
+import FollowerThreads from './FollowerThreads';
+import Threads from './Threads';
 
 export default function LayoutHome({
   children,
@@ -22,13 +23,12 @@ export default function LayoutHome({
           <GridItem colSpan={10}>{children}</GridItem>
           <GridItem colSpan={5}>
             <Threads
-              title="หวยเด็ด / ลอตเตอรี่"
-              tag={['หวยเด็ด', 'หวย', 'ลอตเตอรี่']}
-              mt={4}
-            />
-            <Threads
               title="ข่าวรับสมัครงาน"
               tag={['รับสมัครงาน', 'งานราชการ', 'งานเอกชน']}
+              mt={4}
+            />
+            <FollowerThreads
+              title="แนะนำผู้ใช้"
               mt={4}
             />
           </GridItem>

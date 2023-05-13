@@ -35,11 +35,12 @@ export default function Post(props: any) {
         <Flex direction="column" alignContent="space-around" mt={-1.5}>
           <Link href={userUrl}>
             <Button
-              background="transparent"
+
               px={1}
               py={1}
               h="auto"
               type="button"
+              variant='link'
             >
               <Text as="span" color="blackAlpha.700" fontSize="sm">
                 {data.user.name}

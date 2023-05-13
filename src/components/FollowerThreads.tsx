@@ -12,12 +12,13 @@ import {
   Text,
 } from '@chakra-ui/react';
 import { BiHash } from 'react-icons/bi';
+import { MockPots } from '../../configs/constant';
 import Link from 'next/link';
-import { MockPots } from '../../../configs/constant';
 
-export default function AsideSimilarPost(props: any) {
-  const { mt } = props;
-  const [data, setData] = useState(MockPots);
+export default function FollowerThreads(props: any) {
+  const { title, mt } = props;
+
+  const [data, setData] = useState([]);
 
   return (
     <Box
@@ -25,27 +26,14 @@ export default function AsideSimilarPost(props: any) {
       borderRadius="md"
       boxShadow="xs"
       overflow="hidden"
+      top={20}
+      position="sticky"
       mt={mt}
     >
+      <Heading as="h5" size="md" p={4}>
+        {title}
+      </Heading>
       <Box>
-        <Heading as="h5" size="md" p={4}>
-          โพสต์ที่เกี่ยวข้อง
-        </Heading>
-      </Box>
-      <Box>
-        {data.length === 0 && (
-          <Flex px={4} mb={6} alignItems="center" direction="column">
-            <Text textAlign="center" py={4} color="blackAlpha.600">
-              อุ๊ยย.. 🤭 ดูเหมือนว่ายังไม่มีโพสต์
-              <br /> มาสร้างโพสต์แรกของคุณกันเถอะ 📝
-            </Text>
-            {/* <Link href="/new">
-              <Button colorScheme="twitter" variant="solid" size="sm">
-                สร้างโพสต์
-              </Button>
-            </Link> */}
-          </Flex>
-        )}
         {data.length > 0 && (
           <List>
             {data.map((val: any, index: number) => (
@@ -56,15 +44,13 @@ export default function AsideSimilarPost(props: any) {
                     py={4}
                     px={4}
                     _hover={{ background: 'whiteAlpha.900' }}
-                    borderBottom="1px"
-                    borderColor="gray.200"
                   >
                     <Text>{val.post.title}</Text>
                     <Box mt={1}>
                       {val.post.countComment > 0 && (
                         <Text>{val.post.countComment} ความเห็น</Text>
                       )}
-                      {/* {val.post.countComment === 0 && (
+                      {val.post.countComment === 0 && (
                         <Text
                           background="orange.200"
                           width="fit-content"
@@ -76,7 +62,7 @@ export default function AsideSimilarPost(props: any) {
                         >
                           ใหม่
                         </Text>
-                      )} */}
+                      )}
                     </Box>
                   </Flex>
                 </Link>
