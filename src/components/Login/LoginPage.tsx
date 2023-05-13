@@ -21,7 +21,7 @@ export default function LoginPage({ children }: { children: React.ReactNode }) {
 
   return (
     <>
-      <Container as="main" maxWidth={['680']} py={26}>
+      <Container as="main" maxWidth={['560']} py={26}>
         <Flex
           background="whiteAlpha.600"
           borderRadius="md"

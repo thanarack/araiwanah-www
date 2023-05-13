@@ -21,14 +21,13 @@ export default function LayoutHome({
           </GridItem>
           <GridItem colSpan={10}>{children}</GridItem>
           <GridItem colSpan={5}>
-            <Threads title="พูดคุยสอบถาม" tag={['พูดคุยสอบถาม']} />
             <Threads
               title="หวยเด็ด / ลอตเตอรี่"
               tag={['หวยเด็ด', 'หวย', 'ลอตเตอรี่']}
               mt={4}
             />
             <Threads
-              title="รับสมัครงาน"
+              title="ข่าวรับสมัครงาน"
               tag={['รับสมัครงาน', 'งานราชการ', 'งานเอกชน']}
               mt={4}
             />

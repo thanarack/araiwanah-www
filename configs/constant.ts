@@ -28,8 +28,8 @@ export const AsideListItems = [
     icon: FcFaq,
   },
   {
-    title: 'เกี่ยวกับเรา',
-    link: '/about',
+    title: 'นโยบายการใช้งาน',
+    link: '/term',
     icon: FcAbout,
   },
   // {

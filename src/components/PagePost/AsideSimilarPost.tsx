@@ -46,11 +46,11 @@ export default function AsideSimilarPost(props: any) {
               อุ๊ยย.. 🤭 ดูเหมือนว่ายังไม่มีโพสต์
               <br /> มาสร้างโพสต์แรกของคุณกันเถอะ 📝
             </Text>
-            <Link href="/new">
+            {/* <Link href="/new">
               <Button colorScheme="twitter" variant="solid" size="sm">
                 สร้างโพสต์
               </Button>
-            </Link>
+            </Link> */}
           </Flex>
         )}
         {data.length > 0 && (
